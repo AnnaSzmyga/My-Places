@@ -1,4 +1,31 @@
-'use strict'
+'use strict';
+
+(function(){
+
+
+// HTML TEMPLATE
+
+var slidesTemplate = document.querySelector('#slides-template').innerHTML;
+
+Mustache.parse(slidesTemplate);
+
+var slidesList = '';
+
+for (var i = 0; i < slidesData.length; i++) {
+	slidesList += Mustache.render(slidesTemplate, slidesData[i]);
+}
+
+var results = document.querySelector('#results');
+results.insertAdjacentHTML('beforeend', slidesList);
+
+var carouselCells = document.querySelectorAll('.carousel-cell');
+for (var i = 0; i < carouselCells.length; i++) {
+	carouselCells[i].id = 'carousel-cell' + (i + 1);
+}
+
+
+
+// FLICKITY CAROUSEL
 
 var flkty = new Flickity( '.main-carousel', {
   freeScroll: true,
@@ -18,3 +45,5 @@ flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
 });
+
+})(); 
