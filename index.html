@@ -12,7 +12,8 @@
 </head>
 <body>
 	<div class="main-carousel">
-		<div class="carousel-cell" id="carousel-cell1" style="background-image: url(images/moscow-1.jpg);">
+		<!-- <div id="results"></div> -->
+		<!-- <div class="carousel-cell" id="carousel-cell1" style="background-image: url(images/moscow-1.jpg);">
 			<div class="container">
 				<h2>The Cathedral of Vasily the Blessed</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>
@@ -53,14 +54,62 @@
 				<h2>VDNH - Fountain of Friendship of Peoples</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>
 			</div>
-		</div>
+		</div> -->
 
 	</div>
+	<div id="results"></div>
 	<button class="restart-btn">Restart</button>
 	<div class="progress-bar"></div>
 
 	<script  src="vendor/flickity.pkgd.min.js"></script>  
 	<script  src="vendor/hash.js"></script>
+	<script id="slides-template" type="x-tmpl-mustache">
+		<div class="carousel-cell" style="background-image: url({{image}});">
+			<div class="container">
+					<h2>{{title}}</h2>
+					{{{description}}}
+			</div>
+		</div>
+	</script>
+	<script>
+		var slidesData = [
+			{
+				image: 'images/moscow-1.jpg',
+				title: 'The Cathedral of Vasily the Blessed',
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+			},
+			{
+				image: 'images/moscow-2.jpg',
+				title: 'Moscow Kremlin',
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+			},
+			{
+				image: 'images/moscow-3.jpg',
+				title: 'Izmailovo Kremlin',
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+			},
+			{
+				image: 'images/moscow-4.jpg',
+				title: 'Cathedral of Christ the Saviour',
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+			},
+			{
+				image: 'images/moscow-5.jpg',
+				title: 'Moscow City',
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+			},
+			{
+				image: 'images/moscow-6.jpg',
+				title: 'Tea House',
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+			},
+			{
+				image: 'images/moscow-7.jpg',
+				title: 'VDNH - Fountain of Friendship of Peoples',
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+			}
+		];
+	</script>
     <script  src="js/script.js"></script>
 </body>
 
