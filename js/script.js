@@ -1,13 +1,13 @@
-// 'use strict'
+'use strict';
 
-// (function(){
+(function(){
 
 
 // HTML TEMPLATE
 
-var slidesTemplate = document.querySelector('#slides-list');
+var slidesTemplate = document.querySelector('#slides-template').innerHTML;
 
-Mustache.parse(slidesTemplate.innerHTML);
+Mustache.parse(slidesTemplate);
 
 var slidesList = '';
 
@@ -15,9 +15,13 @@ for (var i = 0; i < slidesData.length; i++) {
 	slidesList += Mustache.render(slidesTemplate, slidesData[i]);
 }
 
-document.querySelector('#results').insertAdjacentHTML('beforeend', slidesList);
+var results = document.querySelector('#results');
+results.insertAdjacentHTML('beforeend', slidesList);
 
-console.log(slidesTemplate);
+var carouselCells = document.querySelectorAll('.carousel-cell');
+for (var i = 0; i < carouselCells.length; i++) {
+	carouselCells[i].id = 'carousel-cell' + (i + 1);
+}
 
 
 
@@ -42,4 +46,4 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
-// })(); 
+})(); 
