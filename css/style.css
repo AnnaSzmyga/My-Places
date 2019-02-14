@@ -1,27 +1,88 @@
-body { font-family: 'Nanum Gothic', sans-serif; }
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
 
-.main-carousel { position: relative; /* no circle */ /* big previous & next buttons */ /* icon color */ /* hide disabled button */ }
+.main-carousel {
+  position: relative;
+  /* no circle */
+  /* big previous & next buttons */
+  /* icon color */
+  /* hide disabled button */
+}
 
-.main-carousel .carousel-cell { width: 100%; height: 50vh; min-height: 250px; margin-right: 10px; background-size: cover; color: #fff; text-shadow: 2px 2px 5px black; }
+.main-carousel .carousel-cell {
+  width: 100%;
+  height: 50vh;
+  min-height: 250px;
+  margin-right: 10px;
+  background-size: cover;
+  color: #fff;
+  text-shadow: 2px 2px 5px black;
+}
 
-.main-carousel .flickity-button { background: transparent; border: 0; cursor: pointer; }
+.main-carousel .flickity-button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
 
-.main-carousel .flickity-prev-next-button { position: absolute; width: 70px; height: 70px; }
+.main-carousel .flickity-prev-next-button {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
 
-.main-carousel .flickity-button-icon { fill: white; }
+.main-carousel .flickity-button-icon {
+  fill: white;
+}
 
-.main-carousel .flickity-button:disabled { display: none; }
+.main-carousel .flickity-button:disabled {
+  display: none;
+}
 
-.main-carousel .flickity-prev-next-button.previous { left: 40px; top: 50%; transform: translateY(-50%); }
+.main-carousel .flickity-prev-next-button.previous {
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-.main-carousel .flickity-prev-next-button.next { right: 40px; top: 50%; transform: translateY(-50%); }
+.main-carousel .flickity-prev-next-button.next {
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-.container { max-width: 1100px; margin: auto; padding: 15px; }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px;
+}
 
-.restart-btn { position: absolute; left: 0; transform: translateY(-120%); background: transparent; border: 0; font-size: 25px; color: lightgrey; text-shadow: 2px 2px 5px black; cursor: pointer; }
+.restart-btn {
+  position: absolute;
+  left: 0;
+  transform: translateY(-120%);
+  background: transparent;
+  border: 0;
+  font-size: 25px;
+  color: lightgrey;
+  text-shadow: 2px 2px 5px black;
+  cursor: pointer;
+}
 
-.restart-btn:hover { color: #fff; }
+.restart-btn:hover {
+  color: #fff;
+}
 
-.progress-bar { width: 0; height: 15px; background-color: grey; }
+.progress-bar {
+  width: 0;
+  height: 15px;
+  background-color: grey;
+}
 
-@media (min-width: 992px) { .main-carousel .carousel-cell { height: 80vh; } }
+@media (min-width: 992px) {
+  .main-carousel .carousel-cell {
+    height: 80vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */
