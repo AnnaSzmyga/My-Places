@@ -46,4 +46,37 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
+
+//GOOGLE MAP
+
+
+window.initMap = function() {
+	
+	var catedral1 = slidesData[0].coords;
+
+	
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 16,
+		center: catedral1
+	});
+
+
+	// window.addEventListener('hashchange', function() {
+		
+	// 	console.log('hash has been changed!');
+
+	// 	map.panTo(slidesData[(window.location.hash.substr(14)) - 1].coords);
+	// });
+
+
+	for ( i = 0; i < slidesData.length; i++) {
+		
+		var marker = new google.maps.Marker({
+			position: slidesData[i].coords,
+			map: map
+		});
+	} 
+}
+
+
 })(); 
