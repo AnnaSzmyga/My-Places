@@ -52,30 +52,31 @@ flkty.on( 'scroll', function( progress ) {
 
 window.initMap = function() {
 	
-	var catedral1 = slidesData[0].coords;
-
-	
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 16,
-		center: catedral1
+		center: slidesData[0].coords
 	});
 
+	var allMarkers = [];
 
-	// window.addEventListener('hashchange', function() {
-		
-	// 	console.log('hash has been changed!');
-
-	// 	map.panTo(slidesData[(window.location.hash.substr(14)) - 1].coords);
-	// });
-
-
-	for ( i = 0; i < slidesData.length; i++) {
+	//creating an array with markers:
+	for ( let i = 0; i < slidesData.length; i++) {
 		
 		var marker = new google.maps.Marker({
 			position: slidesData[i].coords,
 			map: map
 		});
-	} 
+		
+		allMarkers.push(marker);
+
+		marker.addListener('click', function(){
+			flkty.select(i);
+		});
+	}
+
+	flkty.on('change', function(index) {
+	  map.panTo(slidesData[index].coords);
+	});
 }
 
 
