@@ -11,6 +11,7 @@ body {
 	  min-height: 250px;
 	  margin-right: 10px;
 	  background-size: cover;
+	  background-position: 0 30%;
 	  color: #fff;
 	  text-shadow: 2px 2px 5px black;
 	}
@@ -28,7 +29,10 @@ body {
 	}
 	/* icon color */
 	.flickity-button-icon {
-	  fill: white;
+	  fill: lightgrey;
+	  &:hover {
+	  	fill: #fff;
+	  }
 	}
 	/* hide disabled button */
 	.flickity-button:disabled {
@@ -69,10 +73,15 @@ body {
 	height: 15px;
 	background-color: grey;
 }
+#map {
+	height: 50vh;
+	width: 100%;
+}
 
 
+/*
 @media (min-width: 992px) {
 	.main-carousel .carousel-cell {
 		height: 80vh;
 	}
-}
+}*/

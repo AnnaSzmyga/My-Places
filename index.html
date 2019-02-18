@@ -14,6 +14,7 @@
 	<div class="main-carousel" id="results"></div>
 	<button class="restart-btn">Restart</button>
 	<div class="progress-bar"></div>
+	<div id="map"></div>
 
 	<script  src="vendor/flickity.pkgd.min.js"></script>  
 	<script  src="vendor/hash.js"></script>
@@ -31,41 +32,49 @@
 			{
 				image: 'images/moscow-1.jpg',
 				title: 'The Cathedral of Vasily the Blessed',
-				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>',
+				coords: {lat: 55.7525, lng: 37.6231}
 			},
 			{
 				image: 'images/moscow-2.jpg',
 				title: 'Moscow Kremlin',
-				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>',
+				coords: {lat: 55.752, lng: 37.6175}
 			},
 			{
 				image: 'images/moscow-3.jpg',
 				title: 'Izmailovo Kremlin',
-				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>',
+				coords: {lat: 55.7942, lng: 37.7491}
 			},
 			{
 				image: 'images/moscow-4.jpg',
 				title: 'Cathedral of Christ the Saviour',
-				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>',
+				coords: {lat: 55.7447, lng: 37.6055}
 			},
 			{
 				image: 'images/moscow-5.jpg',
-				title: 'Moscow City',
-				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+				title: 'Moscow City Towers',
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>',
+				coords: {lat: 55.7484, lng: 37.5403}
 			},
 			{
 				image: 'images/moscow-6.jpg',
-				title: 'Tea House',
-				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+				title: 'Perlov Tea House',
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>',
+				coords: {lat: 55.764, lng: 37.6358}
 			},
 			{
 				image: 'images/moscow-7.jpg',
 				title: 'VDNH - Fountain of Friendship of Peoples',
-				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>'
+				description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus dui at velit rutrum pulvinar. Aliquam varius sollicitudin mi. Morbi at mauris ut diam lacinia pharetra. Maecenas id pharetra justo, sed faucibus libero. Vestibulum sit amet ante mi. Integer odio augue, aliquet non quam in, cursus vulputate dui. </p>',
+				coords: {lat: 55.83, lng: 37.6314}
 			}
 		];
 	</script>
     <script  src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOwy6FWMFN-4BbfXwqwGMj5edc4BYTIoY&callback=initMap"></script>
 </body>
 
 </html>
