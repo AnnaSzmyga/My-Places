@@ -57,19 +57,17 @@ window.initMap = function() {
 		center: slidesData[0].coords
 	});
 
-	var allMarkers = [];
+	var markers = [];
 
 	//creating an array with markers:
 	for ( let i = 0; i < slidesData.length; i++) {
 		
-		var marker = new google.maps.Marker({
+		markers[i] = new google.maps.Marker({
 			position: slidesData[i].coords,
 			map: map
 		});
-		
-		allMarkers.push(marker);
 
-		marker.addListener('click', function(){
+		markers[i].addListener('click', function(){
 			flkty.select(i);
 		});
 	}
